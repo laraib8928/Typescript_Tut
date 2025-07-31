@@ -50,4 +50,18 @@ function throwError(massage) {
 console.log(throwError);
 function infiniteLoop() { while (true) { } }
 console.log(infiniteLoop);
+const impossible = throwError("Failed");
+function exhaustiveCheck(x) { throw new Error("Unhandled case"); }
+let mixedArray = ["a", 1];
+const nullable = null;
+const response = { success: true, data: 42 };
+const error = { success: false, error: "Failed" };
+const users = [{ name: "Alice", age: 25 }];
+function safeDivide(a, b) {
+    if (b === 0)
+        throwError("Division by zero");
+    return a / b;
+}
+const parsed = JSON.parse('{"key": "value"}');
+const isUser = (obj) => !!obj && typeof obj === "object" && "name" in obj && "age" in obj;
 //# sourceMappingURL=index.js.map
